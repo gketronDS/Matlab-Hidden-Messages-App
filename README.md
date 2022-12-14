@@ -27,3 +27,5 @@ to return the final presented image. To recover the second method, the mod funct
 remainder of the tens place divided by 3. The final recovered image is expanded and presented
 in the GUI. To recover the third method, the code simply checks if the whole pixel value is odd
 or even. The fourth method checks if the very last pixel value is divisible wholly by 3.
+
+To run this application, please download matlab and open the .mlapp file. 
