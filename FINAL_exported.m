@@ -3,22 +3,22 @@ classdef FINAL_exported < matlab.apps.AppBase
     % Properties that correspond to app components
     properties (Access = public)
         UIFigure                      matlab.ui.Figure
-        TeamSteganosaurusLabel        matlab.ui.control.Label
-        EmbeddedImageButton           matlab.ui.control.Button
-        LoadSecretImagesButton        matlab.ui.control.Button
-        RestartButton                 matlab.ui.control.Button
-        Image2                        matlab.ui.control.Image
-        HowtoGetStartedTextArea       matlab.ui.control.TextArea
-        HowtoGetStartedTextAreaLabel  matlab.ui.control.Label
-        Recovery1Button               matlab.ui.control.Button
-        SaveimageButton               matlab.ui.control.Button
-        LoadHostImageButton           matlab.ui.control.Button
-        Embed1Button                  matlab.ui.control.Button
-        Image_2                       matlab.ui.control.Image
         Image                         matlab.ui.control.Image
-        UIAxes                        matlab.ui.control.UIAxes
-        UIAxes4                       matlab.ui.control.UIAxes
+        Image_2                       matlab.ui.control.Image
         UIAxes2                       matlab.ui.control.UIAxes
+        Embed1Button                  matlab.ui.control.Button
+        LoadHostImageButton           matlab.ui.control.Button
+        SaveimageButton               matlab.ui.control.Button
+        Recovery1Button               matlab.ui.control.Button
+        UIAxes4                       matlab.ui.control.UIAxes
+        HowtoGetStartedTextAreaLabel  matlab.ui.control.Label
+        HowtoGetStartedTextArea       matlab.ui.control.TextArea
+        Image2                        matlab.ui.control.Image
+        UIAxes                        matlab.ui.control.UIAxes
+        RestartButton                 matlab.ui.control.Button
+        LoadSecretImagesButton        matlab.ui.control.Button
+        EmbeddedImageButton           matlab.ui.control.Button
+        TeamSteganosaurusLabel        matlab.ui.control.Label
     end
 
     
@@ -861,8 +861,8 @@ ydogFinalB = dogFinalB;
     revivedHidden10;
     extractHidden10 = Expand(revivedHidden10);
     
-% 4 7 and 10 still don't work %Â¯\_(ãƒ„)_/Â¯
-% Â¯\_(ãƒ„)_/Â¯Â¯\_(ãƒ„)_/Â¯Â¯\_(ãƒ„)_/Â¯Â¯\_(ãƒ„)_/Â¯Â¯\_(ãƒ„)_/Â¯
+% 4 7 and 10 still don't work %¯\_(ÿ)_/¯
+% ¯\_(ÿ)_/¯¯\_(ÿ)_/¯¯\_(ÿ)_/¯¯\_(ÿ)_/¯¯\_(ÿ)_/¯
 
 X = montage({extractHidden01,extractHidden02,extractHidden03,extractHidden04, extractHidden05, extractHidden06, extractHidden07, extractHidden08, extractHidden09, extractHidden10})
             
@@ -962,36 +962,6 @@ sound(S(1).y,S(1).Fs)
             app.UIFigure.Name = 'UI Figure';
             app.UIFigure.CloseRequestFcn = createCallbackFcn(app, @UIFigureCloseRequest, true);
 
-            % Create UIAxes2
-            app.UIAxes2 = uiaxes(app.UIFigure);
-            app.UIAxes2.PlotBoxAspectRatio = [1 1 1];
-            app.UIAxes2.XTickLabelRotation = 0;
-            app.UIAxes2.YTickLabelRotation = 0;
-            app.UIAxes2.ZTickLabelRotation = 0;
-            app.UIAxes2.Interruptible = 'off';
-            app.UIAxes2.Visible = 'off';
-            app.UIAxes2.Position = [223 109 200 188];
-
-            % Create UIAxes4
-            app.UIAxes4 = uiaxes(app.UIFigure);
-            app.UIAxes4.DataAspectRatio = [1 1 1];
-            app.UIAxes4.PlotBoxAspectRatio = [1 1 1];
-            app.UIAxes4.XTickLabelRotation = 0;
-            app.UIAxes4.YTickLabelRotation = 0;
-            app.UIAxes4.ZTickLabelRotation = 0;
-            app.UIAxes4.Visible = 'off';
-            app.UIAxes4.Position = [434 109 190 188];
-
-            % Create UIAxes
-            app.UIAxes = uiaxes(app.UIFigure);
-            app.UIAxes.PlotBoxAspectRatio = [1 1 1];
-            app.UIAxes.XTickLabelRotation = 0;
-            app.UIAxes.YTickLabelRotation = 0;
-            app.UIAxes.ZTickLabelRotation = 0;
-            app.UIAxes.Interruptible = 'off';
-            app.UIAxes.Visible = 'off';
-            app.UIAxes.Position = [11 109 198 188];
-
             % Create Image
             app.Image = uiimage(app.UIFigure);
             app.Image.Position = [-29 121 704 360];
@@ -1001,6 +971,17 @@ sound(S(1).y,S(1).Fs)
             app.Image_2 = uiimage(app.UIFigure);
             app.Image_2.Position = [-29 1 704 360];
             app.Image_2.ImageSource = 'Fl0Ky5.png';
+
+            % Create UIAxes2
+            app.UIAxes2 = uiaxes(app.UIFigure);
+            title(app.UIAxes2, '')
+            xlabel(app.UIAxes2, '')
+            ylabel(app.UIAxes2, '')
+            app.UIAxes2.PlotBoxAspectRatio = [1 1 1];
+            app.UIAxes2.Visible = 'off';
+            app.UIAxes2.BackgroundColor = [1 1 1];
+            app.UIAxes2.Interruptible = 'off';
+            app.UIAxes2.Position = [223 109 200 188];
 
             % Create Embed1Button
             app.Embed1Button = uibutton(app.UIFigure, 'push');
@@ -1037,6 +1018,17 @@ sound(S(1).y,S(1).Fs)
             app.Recovery1Button.Position = [478 73 101 25];
             app.Recovery1Button.Text = '6. Recovery 1';
 
+            % Create UIAxes4
+            app.UIAxes4 = uiaxes(app.UIFigure);
+            title(app.UIAxes4, '')
+            xlabel(app.UIAxes4, '')
+            ylabel(app.UIAxes4, '')
+            app.UIAxes4.DataAspectRatio = [1 1 1];
+            app.UIAxes4.PlotBoxAspectRatio = [1 1 1];
+            app.UIAxes4.Visible = 'off';
+            app.UIAxes4.BackgroundColor = [1 1 1];
+            app.UIAxes4.Position = [434 109 190 188];
+
             % Create HowtoGetStartedTextAreaLabel
             app.HowtoGetStartedTextAreaLabel = uilabel(app.UIFigure);
             app.HowtoGetStartedTextAreaLabel.BackgroundColor = [0.302 0.7451 0.9333];
@@ -1060,6 +1052,17 @@ sound(S(1).y,S(1).Fs)
             app.Image2.ImageClickedFcn = createCallbackFcn(app, @Image2Clicked, true);
             app.Image2.Position = [514 336 117 126];
             app.Image2.ImageSource = 'dinobackground.gif';
+
+            % Create UIAxes
+            app.UIAxes = uiaxes(app.UIFigure);
+            title(app.UIAxes, '')
+            xlabel(app.UIAxes, '')
+            ylabel(app.UIAxes, '')
+            app.UIAxes.PlotBoxAspectRatio = [1 1 1];
+            app.UIAxes.Visible = 'off';
+            app.UIAxes.BackgroundColor = [1 1 1];
+            app.UIAxes.Interruptible = 'off';
+            app.UIAxes.Position = [11 109 198 188];
 
             % Create RestartButton
             app.RestartButton = uibutton(app.UIFigure, 'push');
